@@ -1,0 +1,62 @@
+---
+title: "01-data"
+author: "Sophie Beiers"
+date: "5/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+accepted <- read_csv(here::here("data/accepted-plates.csv")) %>% mutate(outcome = "accepted")
+rejected <- read_csv(here::here("data/rejected-plates.csv")) %>% mutate(outcome = "rejected")
+red_guide <- read_csv(here::here("data/red-guide.csv"))
+```
+
+```{r}
+rejected %>% 
+  group_by(plate) %>% 
+  summarise(n = n()) %>% 
+  arrange(-n)
+
+rejected %>% 
+  mutate(month = lubridate::floor_date(date, "month")) %>% 
+  group_by(month) %>% 
+  summarise(n = n()) %>% 
+  ggplot(aes(x = month, y = n)) +
+  geom_bar(stat = "identity")
+
+bar_rejected <- rejected %>% 
+  mutate(month = lubridate::floor_date(date, "month")) %>% 
+  group_by(month) %>% 
+  summarise(n = n()) %>% 
+  ungroup() %>% 
+  mutate(row = row_number())
+
+write_csv(bar_rejected, here::here("data/bar_rejected.csv"))
+```
+
+```{r}
+overall <- rejected %>% 
+  rbind(accepted) %>% 
+  mutate(month = lubridate::floor_date(date, "month")) %>% 
+  group_by(month) %>% 
+  arrange(outcome) %>% 
+  mutate(num = row_number())
+
+write_csv(overall, "data/overall.csv")  
+
+overall %>% 
+  ggplot(aes(x = month)) +
+  geom_histogram(aes(fill = outcome))
+
+
+overall_bar_data <- overall %>% 
+  group_by(month, outcome) %>% 
+  summarise(n = n()) 
+ 
+  
+group_indices(overall, month)
+```
+

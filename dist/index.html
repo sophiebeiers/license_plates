@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <!-- Source in things  -->
+</head>
+
+<body>
+
+  <style>/* @font-face {
+      font-family: "lp-font";
+      src: url("fonts/FE-FONT.TFF");
+    } */
+    body {
+      background-color: #FFF8EE;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'lp-font', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 10px;
+      line-height: 0.3cm;
+      color: #F0BE30;
+    }
+
+    p {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+    }
+
+    .sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+
+    /* Set the sticky things at top */
+    .sticky {
+      top: 0%;
+      align-self: flex-start;
+
+    }
+    /* .graphic {
+      flex: initial;
+      flex: 2;
+    } */
+
+    /* Minimum height of 70% of the screen */
+    .step {
+      min-height: 90vh;
+      flex:1
+
+    }
+
+    .step>p {
+      background: #135098;
+      padding: 10px 10px;
+      margin-bottom: 0;
+      color: white;
+      /* padding-bottom: 1rem; */
+      text-align: center;
+      border-radius: 25px;
+    }
+
+    .step>ul,
+    .step>h2,
+    .step>h3 {
+      background: #1a0846;
+    }
+
+    .container-1 {
+      padding-right: 100px;
+      padding-left: 100px;
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+
+    }
+
+    .container-2 {
+      width: 400px;
+      /* padding: 20px 0; */
+      display: flex;
+      justify-content: flex-end;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+
+    /*  */
+    /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+
+    .container-1 {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      position: relative;
+    }
+    .container-2 {
+      position: absolute;
+    }
+
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .step {
+    width: 75%;
+  }
+  .graphic {
+    width: 50%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+}</style>
+
+  <!-- The stuff -->
+  <div id="tooltip"></div>
+
+  <!-- The title -->
+  <div class="container">
+    <div class="row mt-6">
+      <div class="offset-2 col-8">
+        <br>
+        <h1><br>
+          <div style="font-size:55px;font-weight:600; letter-spacing: 3;  line-height: 1.6cm">LICENSE<br>PLATES</div><br>
+          <div style="font-weight:400;">THAT COULDA BEEN</div>
+        </h1><br><br>
+      </div>
+        <div id="chart-1" class="sticky graphic"></div>
+      <!-- <div class="offset-md-3 col-sm-6 col-lg-6 col-md-6" id="intro_paragraph">
+        <p> Between 2010 and 2014, there were 133,636 custom license plates requested by New Yorkers. 1,646 of those were rejected. Let's take a look.</p></div> -->
+    </div>
+  </div>
+
+
+  <!-- The steps -->
+
+  <div class="container-1">
+    <div class="container-2">
+      <div class="step" id="one">
+        <p>One thing to note, here, is the New Yorkers are <i>creative</i>. Between 2010 and 2014, only 8 license plates that were ultimately rejected were requested
+        more than once.</p>
+      </div>
+      <div class="step" id="two">
+        <p><strong>BAD2SS</strong> was requested three times -- twice in November 2010 and once again in October 2011.</p>
+      </div>
+      <div class="step" id="three">
+        <p>Something about license plates here. Something about license plates here.</p>
+      </div>
+      <div class="step" id="four">
+        <p>Something about license plates here. Something about license plates here.</p>
+      </div>
+    </div>
+    <div class="graphic">
+    <div id="chart-2" class="sticky graphic"></div>
+  </div>
+  </div>
+
+  
+
+  <!-- source in charts  -->
+  <script src="/scrolly.efd43373.js"></script>
+  <script src="/grid.07caa2f7.js"></script>
+  <script src="/bar.b8d789f5.js"></script>
+
+
+</body>
+
+</html>
