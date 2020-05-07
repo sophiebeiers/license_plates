@@ -27911,7 +27911,7 @@ function ready(_ref) {
     return yScale(d.n);
   }).attr('width', 5).attr('height', function (d) {
     return height - yScale(d.n);
-  }).attr('fill', 'red').attr('opacity', 0).transition().duration(4000).attr('opacity', 1);
+  }).attr('fill', 'red').attr('opacity', 0).transition().duration().attr('opacity', 1);
 }
 },{"d3":"../node_modules/d3/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","../data/bar_rejected.csv":"../data/bar_rejected.csv"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

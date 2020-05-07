@@ -64,7 +64,7 @@ svg
 .attr('fill', 'red')
 .attr('opacity', 0)
 .transition()
-.duration(4000)
+.duration()
 .attr('opacity', 1)
 
 }
