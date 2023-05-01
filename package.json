@@ -33,7 +33,7 @@
     "debounce": "^1.2.0",
     "enter-view": "^2.0.0",
     "gsap": "^2.0.2",
-    "parcel": "^1.10.3",
+    "parcel": "^2.8.3",
     "topojson": "^3.0.2",
     "whatwg-fetch": "^3.0.0"
   }
